@@ -3,8 +3,11 @@ package br.com.alura;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
 
 public class FraudDetectorService {
+
+    private final KafkaDispatcher<Order> orderKafkaDispatcher = new KafkaDispatcher<>();
 
     public static void main(String[] args) {
         var fraudService = new FraudDetectorService();
@@ -19,7 +22,7 @@ public class FraudDetectorService {
         }
     }
 
-    private void parse(ConsumerRecord<String, Order> record) {
+    private void parse(ConsumerRecord<String, Order> record) throws ExecutionException, InterruptedException {
         System.out.println("Processing new order, checking for fraud");
         System.out.println(record.key());
         System.out.println(record.value());
@@ -30,7 +33,14 @@ public class FraudDetectorService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Order processed");
+        var order = record.value();
+        if(order.invalidAmount()){
+            System.out.println("Order is a fraud because amount is " + order.getAmount());
+            orderKafkaDispatcher.send("ECOMMERCE_ORDER_REJECTED", order.getUserId(), order);
+        } else {
+            System.out.println("Order approved: " + order);
+            orderKafkaDispatcher.send("ECOMMERCE_ORDER_APPROVED", order.getUserId(), order);
+        }
     }
 
 }
