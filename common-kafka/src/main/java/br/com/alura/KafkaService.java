@@ -10,7 +10,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Properties;
 import java.util.UUID;
-import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
 public class KafkaService<T> implements Closeable {
@@ -18,17 +17,17 @@ public class KafkaService<T> implements Closeable {
     private final KafkaConsumer<String, T> consumer;
     private final ConsumerFunction parse;
 
-    private KafkaService(String groupId, ConsumerFunction parse, Class<Order> type,  Map<String, String> properties) {
+    private KafkaService(String groupId, ConsumerFunction parse, Class<T> type,  Map<String, String> properties) {
         this.consumer = new KafkaConsumer<>(getProperties(type, groupId, properties));
         this.parse = parse;
     }
 
-    public KafkaService(String groupId, String topic, ConsumerFunction parse, Class<Order> type, Map<String, String> properties) {
+    public KafkaService(String groupId, String topic, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
         this(groupId, parse, type, properties);
         consumer.subscribe(Collections.singleton(topic));
     }
 
-    public KafkaService(String groupId, Pattern topic, ConsumerFunction parse, Class<Order> type, Map<String, String> properties) {
+    public KafkaService(String groupId, Pattern topic, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
         this(groupId, parse, type, properties);
         consumer.subscribe(topic);
     }
@@ -41,17 +40,15 @@ public class KafkaService<T> implements Closeable {
                 for(var record: records) {
                     try {
                         parse.consume(record);
-                    } catch (ExecutionException e) {
-                        throw new RuntimeException(e);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
             }
         }
     }
 
-    private Properties getProperties(Class<Order> type, String groupID, Map<String, String> overrideProperties) {
+    private Properties getProperties(Class<T> type, String groupID, Map<String, String> overrideProperties) {
         var properties = new Properties();
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());

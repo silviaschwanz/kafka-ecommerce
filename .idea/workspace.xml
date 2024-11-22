@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6662e374-c5ff-4e00-af60-a4712f7e4bb7" name="Changes" comment="">
+    <list default="true" id="ffe6b86f-a49e-4d57-92b8-ffaf223b0632" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/Email.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ConsumerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ConsumerFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/FraudDetectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/FraudDetectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/NewOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,49 +22,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2p82JTKWQTIeQ2ObypM92mkdwv4" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2pDwV2V29woBChlQW5y8g9ilmA1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CreateUserService.executor": "Run",
     "Application.EmailService.executor": "Run",
-    "Application.FraudDetectorService (1).executor": "Run",
     "Application.FraudDetectorService.executor": "Run",
     "Application.LogService.executor": "Run",
-    "Application.NewOrder (1).executor": "Run",
     "Application.NewOrder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/var/www/html/Java/kafka-ecommerce/common-kafka/src/main/java/br/com/alura",
-    "last_opened_file_path": "/var/www/html/Java/kafka-ecommerce/service-log/src/main/java/br/com/alura",
+    "last_opened_file_path": "/var/www/html/cursos/Alura/kafka/kafka-cluster-de-brokers-e-microservicos-aula2 (2)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/service-log/src/main/java/br/com/alura" />
-      <recent name="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura" />
-      <recent name="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura" />
-      <recent name="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura" />
-      <recent name="$PROJECT_DIR$/service-email/src/main/java/br/com/alura" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="br.com.alura" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LogService">
+  <component name="RunManager" selected="Application.NewOrder">
+    <configuration name="CreateUserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.CreateUserService" />
+      <module name="service-users" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.EmailService" />
       <module name="service-email" />
@@ -76,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FraudDetectorService (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="FraudDetectorService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.FraudDetectorService" />
       <module name="service-fraud-detector" />
       <extension name="coverage">
@@ -102,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewOrder (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="NewOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.NewOrder" />
       <module name="service-new-order" />
       <extension name="coverage">
@@ -115,37 +118,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.NewOrder" />
-      <module name="kafka-ecommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.alura.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NewOrder (1)" />
-        <item itemvalue="Application.LogService" />
-        <item itemvalue="Application.FraudDetectorService (1)" />
-        <item itemvalue="Application.EmailService" />
         <item itemvalue="Application.NewOrder" />
+        <item itemvalue="Application.LogService" />
+        <item itemvalue="Application.EmailService" />
+        <item itemvalue="Application.FraudDetectorService" />
+        <item itemvalue="Application.CreateUserService" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6662e374-c5ff-4e00-af60-a4712f7e4bb7" name="Changes" comment="" />
-      <created>1732133309425</created>
+      <changelist id="ffe6b86f-a49e-4d57-92b8-ffaf223b0632" name="Changes" comment="" />
+      <created>1732313973613</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1732133309425</updated>
+      <updated>1732313973613</updated>
     </task>
     <servers />
   </component>
