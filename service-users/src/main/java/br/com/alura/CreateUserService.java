@@ -13,7 +13,7 @@ public class CreateUserService {
     private final Connection connection;
 
     public CreateUserService() throws SQLException {
-        String url = "jdbc:sqlite:target/users_database.db";
+        String url = "jdbc:sqlite:db/users_database.db";
         this.connection = DriverManager.getConnection(url);
         try {
             connection.createStatement().execute(
