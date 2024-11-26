@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe6b86f-a49e-4d57-92b8-ffaf223b0632" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service-http-ecommerce/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/Email.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/HttpEcommerceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/NewOrderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/HttpEcommerceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/HttpEcommerceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/NewOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/NewOrderServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-log/src/main/java/br/com/alura/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-log/src/main/java/br/com/alura/LogService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +45,7 @@
     &quot;Application.HttpEcommerceService.executor&quot;: &quot;Run&quot;,
     &quot;Application.LogService.executor&quot;: &quot;Run&quot;,
     &quot;Application.NewOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Maven.kafka-ecommerce [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.kafka-ecommerce [package].executor&quot;: &quot;Run&quot;,
     &quot;Maven.service-http-ecommerce [clean].executor&quot;: &quot;Run&quot;,
@@ -54,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/var/www/html/Java/dioe-materias&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/var/www/html/Java/kafka-ecommerce&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -65,6 +64,7 @@
       <recent name="br.com.alura" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -139,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HttpEcommerceService" />
         <item itemvalue="Application.CreateUserService" />
         <item itemvalue="Application.LogService" />
-        <item itemvalue="Application.FraudDetectorService" />
         <item itemvalue="Application.EmailService" />
+        <item itemvalue="Application.FraudDetectorService" />
+        <item itemvalue="Application.HttpEcommerceService" />
       </list>
     </recent_temporary>
   </component>
