@@ -34,9 +34,7 @@ public class CreateUserService {
                 CreateUserService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER",
                 createUserService::parse,
-                Order.class,
                 Map.of()
-                //Map.of(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName())
         )) {
             kafkaService.run();
         }

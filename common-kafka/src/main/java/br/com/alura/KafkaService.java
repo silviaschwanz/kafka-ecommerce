@@ -14,23 +14,23 @@ public class KafkaService<T> implements Closeable {
     private final KafkaConsumer<String, Message<T>> consumer;
     private final ConsumerFunction parse;
 
-    private KafkaService(String groupId, ConsumerFunction<T> parse, Class<T> type,  Map<String, String> properties) {
-        this.consumer = new KafkaConsumer<>(getProperties(type, groupId, properties));
+    private KafkaService(String groupId, ConsumerFunction<T> parse, Map<String, String> properties) {
+        this.consumer = new KafkaConsumer<>(getProperties(groupId, properties));
         this.parse = parse;
     }
 
-    public KafkaService(String groupId, String topic, ConsumerFunction<T> parse, Class<T> type, Map<String, String> properties) {
-        this(groupId, parse, type, properties);
+    public KafkaService(String groupId, String topic, ConsumerFunction<T> parse, Map<String, String> properties) {
+        this(groupId, parse, properties);
         consumer.subscribe(Collections.singleton(topic));
     }
 
-    public KafkaService(String groupId, Pattern topic, ConsumerFunction<T> parse, Class<T> type, Map<String, String> properties) {
-        this(groupId, parse, type, properties);
+    public KafkaService(String groupId, Pattern topic, ConsumerFunction<T> parse, Map<String, String> properties) {
+        this(groupId, parse, properties);
         consumer.subscribe(topic);
     }
 
-    public KafkaService(String groupId, List<String> topics, ConsumerFunction<T> parse, Class<T> type, Map<String, String> properties) {
-        this(groupId, parse, type, properties);
+    public KafkaService(String groupId, List<String> topics, ConsumerFunction<T> parse, Map<String, String> properties) {
+        this(groupId, parse, properties);
         consumer.subscribe(topics);
     }
 
@@ -50,7 +50,7 @@ public class KafkaService<T> implements Closeable {
         }
     }
 
-    private Properties getProperties(Class<T> type, String groupID, Map<String, String> overrideProperties) {
+    private Properties getProperties(String groupID, Map<String, String> overrideProperties) {
         var properties = new Properties();
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:19092");
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());

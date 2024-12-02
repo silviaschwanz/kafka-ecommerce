@@ -38,7 +38,6 @@ public class BatchSendMessageService {
                 BatchSendMessageService.class.getSimpleName(),
                 "SEND_MESSAGE_TO_ALL_USERS",
                 batchService::parse,
-                String.class,
                 Map.of()
         )) {
             kafkaService.run();
@@ -51,7 +50,12 @@ public class BatchSendMessageService {
         var message = record.value();
         System.out.println("Topic: " + message.getPayload());
         for (User user : getAllUsers()) {
-            userDispatcher.send( message.getPayload(), user.getUuid(), user);
+            userDispatcher.send(
+                    message.getPayload(),
+                    user.getUuid(),
+                    message.getId().continueWith(BatchSendMessageService.class.getSimpleName()),
+                    user
+            );
         }
     }
 

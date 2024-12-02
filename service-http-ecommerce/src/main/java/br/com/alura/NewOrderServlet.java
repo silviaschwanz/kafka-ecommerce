@@ -34,8 +34,18 @@ public class NewOrderServlet extends HttpServlet implements Servlet {
             var email = new Email(emailValue, emailSubject, emailBody);
             var orderId = UUID.randomUUID().toString();
             var order = new Order(orderId, amount, email);
-            orderKafkaDispatcher.send("ECOMMERCE_NEW_ORDER", emailValue, order);
-            emailKafkaDispatcher.send("ECOMMERCE_SEND_EMAIL", emailValue, email);
+            orderKafkaDispatcher.send(
+                    "ECOMMERCE_NEW_ORDER",
+                    emailValue,
+                    new CorrelationId(NewOrderServlet.class.getSimpleName()),
+                    order
+            );
+            emailKafkaDispatcher.send(
+                    "ECOMMERCE_SEND_EMAIL",
+                    emailValue,
+                    new CorrelationId(NewOrderServlet.class.getSimpleName()),
+                    email
+            );
             System.out.println("New Order sent successfully");
             resp.getWriter().println("New Order sent successfully");
             resp.setStatus(HttpServletResponse.SC_OK);

@@ -18,9 +18,19 @@ public class NewOrder {
                     var amount = new BigDecimal(Math.random() * 5000 + 1);
                     var order = new Order(orderId, amount, email);
 
-                    orderKafkaDispatcher.send("ECOMMERCE_NEW_ORDER", emailValue, order);
+                    orderKafkaDispatcher.send(
+                            "ECOMMERCE_NEW_ORDER",
+                            emailValue,
+                            new CorrelationId(NewOrder.class.getSimpleName()),
+                            order
+                    );
 
-                    emailKafkaDispatcher.send("ECOMMERCE_SEND_EMAIL", emailValue, email);
+                    emailKafkaDispatcher.send(
+                            "ECOMMERCE_SEND_EMAIL",
+                            emailValue,
+                            new CorrelationId(NewOrder.class.getSimpleName()),
+                            email
+                    );
                 }
             }
         }

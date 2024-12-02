@@ -17,7 +17,6 @@ public class ReadingReportService {
                 ReadingReportService.class.getSimpleName(),
                 "USER_GENERATE_READING_REPORT",
                 reportService::parse,
-                User.class,
                 Map.of()
         )) {
             kafkaService.run();

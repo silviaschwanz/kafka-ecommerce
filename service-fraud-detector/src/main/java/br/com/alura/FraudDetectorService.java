@@ -15,14 +15,13 @@ public class FraudDetectorService {
                 FraudDetectorService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER",
                 fraudService::parse,
-                Order.class,
                 new HashMap<>()
         )) {
             kafkaService.run();
         }
     }
 
-    private void parse(ConsumerRecord<String, Order> record) throws ExecutionException, InterruptedException {
+    private void parse(ConsumerRecord<String, Message<Order>> record) throws ExecutionException, InterruptedException {
         System.out.println("Processing new order, checking for fraud");
         System.out.println(record.key());
         System.out.println(record.value());
@@ -33,13 +32,24 @@ public class FraudDetectorService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        var order = record.value();
+        var message = record.value();
+        var order = message.getPayload();
         if(order.invalidAmount()){
             System.out.println("Order is a fraud because amount is " + order.getAmount());
-            orderKafkaDispatcher.send("ECOMMERCE_ORDER_REJECTED", order.getEmailAddress(), order);
+            orderKafkaDispatcher.send(
+                    "ECOMMERCE_ORDER_REJECTED",
+                    order.getEmailAddress(),
+                    message.getId().continueWith(FraudDetectorService.class.getSimpleName()),
+                    order
+            );
         } else {
             System.out.println("Order approved: " + order);
-            orderKafkaDispatcher.send("ECOMMERCE_ORDER_APPROVED", order.getEmailAddress(), order);
+            orderKafkaDispatcher.send(
+                    "ECOMMERCE_ORDER_APPROVED",
+                    order.getEmailAddress(),
+                    message.getId().continueWith(FraudDetectorService.class.getSimpleName()),
+                    order
+            );
         }
     }
 

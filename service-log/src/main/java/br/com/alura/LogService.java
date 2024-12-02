@@ -12,12 +12,16 @@ public class LogService {
 
     public static void main(String[] args) {
         var logService = new LogService();
-        try (var kafkaService = new KafkaService(
+        try (var kafkaService = new KafkaService<>(
                 LogService.class.getSimpleName(),
                 //Pattern.compile("ECOMMERCE.*"),
-                Arrays.asList("ECOMMERCE_SEND_EMAIL", "ECOMMERCE_NEW_ORDER"),
+                Arrays.asList(
+                        "ECOMMERCE_SEND_EMAIL",
+                        "ECOMMERCE_NEW_ORDER",
+                        "USER_GENERATE_READING_REPORT",
+                        "SEND_MESSAGE_TO_ALL_USERS"
+                ),
                 logService::parse,
-                String.class,
                 Map.of(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName())
         )) {
             kafkaService.run();
@@ -25,7 +29,7 @@ public class LogService {
 
     }
 
-    private void parse(ConsumerRecord<String, String> record) {
+    private void parse(ConsumerRecord<String, Message<String>> record) {
         System.out.println("------------------------------------------");
         System.out.println("LOG: " + record.topic());
         System.out.println(record.key());
