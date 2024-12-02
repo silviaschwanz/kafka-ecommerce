@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe6b86f-a49e-4d57-92b8-ffaf223b0632" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/GenerateAllReportServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-reading-report/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/IO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/ReadingReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-reading-report/src/main/resources/report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/BatchSendMessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/CorrelationId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/MessageAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/HttpEcommerceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/HttpEcommerceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ConsumerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ConsumerFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/GsonDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/GsonDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/GsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/GsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/GenerateAllReportServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/GenerateAllReportServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/ReadingReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/ReadingReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/BatchSendMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/BatchSendMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,33 +44,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BatchSendMessageService.executor": "Run",
-    "Application.CreateUserService.executor": "Run",
-    "Application.EmailService.executor": "Run",
-    "Application.FraudDetectorService.executor": "Run",
-    "Application.HttpEcommerceService.executor": "Run",
-    "Application.LogService.executor": "Run",
-    "Application.NewOrder.executor": "Run",
-    "Application.ReadingReportService.executor": "Run",
-    "Docker.compose.yaml: Compose Deployment.executor": "Run",
-    "Maven.kafka-ecommerce [clean].executor": "Run",
-    "Maven.kafka-ecommerce [install].executor": "Run",
-    "Maven.kafka-ecommerce [package].executor": "Run",
-    "Maven.service-http-ecommerce [clean].executor": "Run",
-    "Maven.service-http-ecommerce [install].executor": "Run",
-    "Maven.service-http-ecommerce [package].executor": "Run",
-    "Maven.service-http-ecommerce [validate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/var/www/html/Java/kafka-ecommerce",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BatchSendMessageService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CreateUserService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EmailService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FraudDetectorService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HttpEcommerceService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LogService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NewOrder.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadingReportService.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.kafka-ecommerce [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.kafka-ecommerce [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.kafka-ecommerce [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.service-http-ecommerce [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.service-http-ecommerce [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.service-http-ecommerce [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.service-http-ecommerce [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/var/www/html/Java/kafka-ecommerce&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.alura" />
@@ -82,7 +83,7 @@
       <recent name="br.com.alura" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BatchSendMessageService">
+  <component name="RunManager" selected="Application.CreateUserService">
     <configuration name="BatchSendMessageService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.BatchSendMessageService" />
       <module name="service-users" />
@@ -122,19 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.LogService" />
-      <module name="service-log" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.alura.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReadingReportService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ReadingReportService" />
       <module name="service-reading-report" />
@@ -148,13 +136,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HttpEcommerceService" />
-        <item itemvalue="Application.ReadingReportService" />
         <item itemvalue="Application.CreateUserService" />
+        <item itemvalue="Application.ReadingReportService" />
         <item itemvalue="Application.BatchSendMessageService" />
-        <item itemvalue="Application.LogService" />
+        <item itemvalue="Application.HttpEcommerceService" />
+        <item itemvalue="Docker.compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -168,5 +164,16 @@
       <updated>1732313973613</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/GsonDeserializer.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
