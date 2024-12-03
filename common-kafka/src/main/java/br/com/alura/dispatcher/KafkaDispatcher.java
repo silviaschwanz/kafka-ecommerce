@@ -1,5 +1,7 @@
-package br.com.alura;
+package br.com.alura.dispatcher;
 
+import br.com.alura.CorrelationId;
+import br.com.alura.Message;
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 
@@ -31,7 +33,7 @@ public class KafkaDispatcher<T> implements Closeable {
     }
 
     public Future<RecordMetadata> sendAsync(String topic, String key, CorrelationId correlationId, T payload) {
-        var value = new Message<>(correlationId, payload);
+        var value = new Message<>(correlationId.continueWith("_" + topic), payload);
         var record = new ProducerRecord<>(topic, key, value);
         var future = producer.send(record, getCallback());
         return future;

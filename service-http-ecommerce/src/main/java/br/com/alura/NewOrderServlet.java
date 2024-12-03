@@ -1,5 +1,6 @@
 package br.com.alura;
 
+import br.com.alura.dispatcher.KafkaDispatcher;
 import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -14,13 +15,11 @@ import java.util.concurrent.ExecutionException;
 public class NewOrderServlet extends HttpServlet implements Servlet {
 
     private final KafkaDispatcher<Order> orderKafkaDispatcher = new KafkaDispatcher<>();
-    private final KafkaDispatcher<Email> emailKafkaDispatcher = new KafkaDispatcher<>();
 
     @Override
     public void destroy() {
         super.destroy();
         orderKafkaDispatcher.close();
-        emailKafkaDispatcher.close();
     }
 
     @Override
@@ -40,18 +39,11 @@ public class NewOrderServlet extends HttpServlet implements Servlet {
                     new CorrelationId(NewOrderServlet.class.getSimpleName()),
                     order
             );
-            emailKafkaDispatcher.send(
-                    "ECOMMERCE_SEND_EMAIL",
-                    emailValue,
-                    new CorrelationId(NewOrderServlet.class.getSimpleName()),
-                    email
-            );
+
             System.out.println("New Order sent successfully");
             resp.getWriter().println("New Order sent successfully");
             resp.setStatus(HttpServletResponse.SC_OK);
-        } catch (ExecutionException e) {
-            throw new ServletException(e);
-        } catch (InterruptedException e) {
+        } catch (ExecutionException | InterruptedException e) {
             throw new ServletException(e);
         }
     }
