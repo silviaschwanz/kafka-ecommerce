@@ -7,6 +7,7 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import java.io.Closeable;
 import java.time.Duration;
 import java.util.*;
+import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
 public class KafkaService<T> implements Closeable {
@@ -34,16 +35,25 @@ public class KafkaService<T> implements Closeable {
         consumer.subscribe(topics);
     }
 
-    public void run() {
-        while (true) {
-            var records = consumer.poll(Duration.ofMillis(100));
-            if(!records.isEmpty()) {
-                System.out.println("Encontrei " + records.count() + " registros");
-                for(var record: records) {
-                    try {
-                        parse.consume(record);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+    public void run() throws ExecutionException, InterruptedException {
+        try(var dispatcherDeadLetter = new KafkaDispatcher<>()) {
+            while (true) {
+                var records = consumer.poll(Duration.ofMillis(100));
+                if(!records.isEmpty()) {
+                    System.out.println("Encontrei " + records.count() + " registros");
+                    for(var record: records) {
+                        try {
+                            parse.consume(record);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            var message = record.value();
+                            dispatcherDeadLetter.send(
+                                    "ECOMMERCE_DEADLETTER",
+                                    message.getId().toString(),
+                                    message.getId().continueWith("DeadLetter"),
+                                    new GsonSerializer<>().serialize("", message)
+                            );
+                        }
                     }
                 }
             }

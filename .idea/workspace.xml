@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ffe6b86f-a49e-4d57-92b8-ffaf223b0632" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ConsumerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/ConsumerFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/CorrelationId.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/CorrelationId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaDispatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-kafka/src/main/java/br/com/alura/KafkaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-email/src/main/java/br/com/alura/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/br/com/alura/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/FraudDetectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-fraud-detector/src/main/java/br/com/alura/FraudDetectorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/GenerateAllReportServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/GenerateAllReportServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/NewOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-http-ecommerce/src/main/java/br/com/alura/NewOrderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-log/src/main/java/br/com/alura/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-log/src/main/java/br/com/alura/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-new-order/src/main/java/br/com/alura/NewOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/ReadingReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-reading-report/src/main/java/br/com/alura/ReadingReportService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/BatchSendMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/BatchSendMessageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-users/src/main/java/br/com/alura/CreateUserService.java" afterDir="false" />
@@ -99,19 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BatchSendMessageService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.BatchSendMessageService" />
-      <module name="service-users" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.alura.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CreateUserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.CreateUserService" />
       <module name="service-users" />
@@ -151,6 +133,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HttpEcommerceService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.HttpEcommerceService" />
+      <module name="service-http-ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReadingReportService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ReadingReportService" />
       <module name="service-reading-report" />
@@ -166,7 +161,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.BatchSendMessageService (1)" />
-      <item itemvalue="Application.BatchSendMessageService" />
+      <item itemvalue="Application.HttpEcommerceService" />
       <item itemvalue="Application.CreateUserService" />
       <item itemvalue="Application.EmailService" />
       <item itemvalue="Application.FraudDetectorService" />
@@ -174,11 +169,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CreateUserService" />
-        <item itemvalue="Application.FraudDetectorService" />
         <item itemvalue="Application.EmailService" />
+        <item itemvalue="Application.FraudDetectorService" />
+        <item itemvalue="Application.CreateUserService" />
         <item itemvalue="Application.ReadingReportService" />
-        <item itemvalue="Application.BatchSendMessageService" />
+        <item itemvalue="Application.HttpEcommerceService" />
       </list>
     </recent_temporary>
   </component>
