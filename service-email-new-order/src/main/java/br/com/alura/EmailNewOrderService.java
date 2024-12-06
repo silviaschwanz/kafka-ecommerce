@@ -40,7 +40,7 @@ public class EmailNewOrderService implements ConsumerService<Order> {
 
     @Override
     public String getConsumerGroup() {
-        return EmailNewOrderService.class.getSimpleName();
+        return "1" + EmailNewOrderService.class.getSimpleName();
     }
 
 }
